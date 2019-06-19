@@ -28,6 +28,7 @@ public class SimonSays extends KeyAdapter {
 	private boolean simonSays = false;
 	Date timeAtStart;
 	int score = 0;
+	
 
 	// Complete steps 1 - 7 before you test
 	// 1. Declare a JFrame variable
@@ -56,20 +57,28 @@ showImage();
 		// 17. Increase the value of score
 if(e.getKeyCode() == imageIndex && simonSays){
 	score ++;
+	speak("correct!");
 }
 		// 18. Use the speak method to tell the user they were correct
 
 		// 19. If the keyCode doesn't match the imageIndex and "Simon didn't
 		// say..."
+if(e.getKeyCode()!= imageIndex && simonSays) {
+	score --;
+	speak("incorrect");
+}
+		// 20. Decrease the value of score
 
-		// 20. Increase the value of score
-
-		// 21. Use the speak method to tell the user they were correct
+		// 21. Use the speak method to tell the user they were incorrect
 
 		// 22. Increment tries by 1
 
-		// 25. If tries is greater than 9 (or however many you want)...
 
+		// 25. If tries is greater than 9 (or however many you want)...
+if(tries == 5) {
+	speak("your score was "+score);
+	System.exit(0);
+}
 		// 26. Tell the user their score
 
 		// 27. Exit the program
@@ -77,13 +86,14 @@ if(e.getKeyCode() == imageIndex && simonSays){
 		// 23. Dispose of the frame
 
 		// 24. Call the showImage method to show a new image
+showImage();
 	}
 
 	private void showImage() {
 		// 5. Initialize your frame to a new JFrame()
  JFrame s = new JFrame();
 		// 6. Set the frame to visible
-s.isVisible();
+s.setVisible(true);
 		// 7. Uncomment the following line to add a random image to your frame
 		s.add(getNextRandomImage());
 
@@ -95,7 +105,7 @@ s.pack();
 		// JFrame.EXIT_ON_CLOSE
 s.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 11. Add a key listener to the frame
-s.addKeyListener(null);
+s.addKeyListener(this);
 		// 12. Create a new instance of Random
 Random r = new Random();
 		// 13. Use the Random and the speak method to either say

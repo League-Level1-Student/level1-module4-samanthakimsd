@@ -11,6 +11,8 @@ import java.applet.AudioClip;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -43,17 +45,26 @@ public class Jeopardy implements ActionListener {
 
 
 
-	public void run() {
+	void run() {
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		quizPanel = new JPanel();
 		frame.setLayout(new BorderLayout());
 
 		// 1. Make the frame show up
+	
 
 		// 2. Give your frame a title
-
+frame.setTitle("jeopardy");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
+	
+
+
+
+		
+
+		
+		
 
 		// 4. Add the header component to the quizPanel
 
