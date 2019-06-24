@@ -57,37 +57,31 @@ public class Jeopardy implements ActionListener {
 		// 2. Give your frame a title
 frame.setTitle("jeopardy");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
-	
-
-
-
-		
-
-		
-		
-
+	JPanel i = createHeader("help");
 		// 4. Add the header component to the quizPanel
-
+quizPanel.add(i); 
 		// 5. Add the quizPanel to the frame
-
+frame.add(quizPanel);
 		// 6. Use the createButton method to set the value of firstButton
-
+createButton("firstButton");
 		// 7. Add the firstButton to the quizPanel
-
+quizPanel.add(firstButton);
 		// 8. Write the code to complete the createButton() method below. Check that your
 		// game looks like Figure 1 in the Jeopardy Handout - http://bit.ly/1bvnvd4.
 
 		// 9. Use the secondButton variable to hold a button using the createButton
 		// method
-
+firstButton = createButton("button");
+secondButton = createButton("button");
 		// 10. Add the secondButton to the quizPanel
-
+quizPanel.add(secondButton);
 		// 11. Add action listeners to the buttons (2 lines of code)
-
+firstButton.addActionListener(this);
+secondButton.addActionListener(this);
 		// 12. Write the code to complete the actionPerformed() method below
 
 		// 13. Add buttons so that you have $200, $400, $600, $800 and $1000 questions
-		
+		firstButton = createButton("$200");
 		 /*
 		 * [optional] Use the showImage or playSound methods when the user answers a
 		 * question
@@ -121,9 +115,10 @@ frame.setTitle("jeopardy");
 
 		JButton buttonPressed = (JButton) e.getSource();
 		// If the buttonPressed was the firstButton
-
+if(buttonPressed == firstButton) {
 			// Call the askQuestion() method
- 
+askQuestion("how do you get nick to finish work", "its impossible", 1,000,000);
+}
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
 
 		// If the buttonPressed was the secondButton
@@ -134,12 +129,12 @@ frame.setTitle("jeopardy");
 
 	}
 
-	private void askQuestion(String question, String correctAnswer, int prizeMoney) {
+	private void askQuestion(String question, String correctAnswer, int prizeMoney, int i, int j) {
 		
 		// Use the playJeopardyTheme() method to play music while the use thinks of an answer
-		
+		playJeopardyTheme();
 		// Remove this temporary message and replace it with a pop-up that asks the user the question
-		JOptionPane.showMessageDialog(null, "this is where the question will be asked");
+		JOptionPane.showMessageDialog(null, "how do you get nick to do his work");
 		
 		// Stop the theme music when they have entered their response. Hint: use the sound variable 
 		
