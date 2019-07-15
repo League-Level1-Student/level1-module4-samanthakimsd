@@ -1,4 +1,4 @@
-package _04_chuckle_clicker;
+package _08_calculator;
 
 import java.awt.Component;
 import java.awt.Dimension;
@@ -11,13 +11,16 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class chuckleClicker 
+public class calculator 
 	implements ActionListener{
-	JButton leftButton = new JButton("joke");
-	JButton rightButton = new JButton("punchline");
+	JButton leftButton = new JButton("add");
+	JButton rightButton = new JButton("sub");
+	JButton middleButton = new JButton("mul");
+	JButton otherButton = new JButton("div");
 
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
+	
 
 
 	void createUI() {
@@ -27,16 +30,19 @@ public class chuckleClicker
 
 		panel.add(leftButton);
 		panel.add(rightButton);
+		panel.add(middleButton);
+		panel.add(otherButton);
 		frame.pack();
-		frame.setTitle("chuckle clicker");
+		frame.setTitle("simple calculator");
 		frame.setVisible(true);
 		leftButton.addActionListener(this);
 		rightButton.addActionListener(this);
-		
+		middleButton.addActionListener(this);
+		otherButton.addActionListener(this);
 	}
 
 	public static void main(String[] args) {
-		new chuckleClicker().createUI();
+		new calculator().createUI();
 
 	}
 
@@ -49,12 +55,13 @@ public class chuckleClicker
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getSource() == leftButton) {
-			JOptionPane.showMessageDialog(null, "What do you call a guy with a rubber toe? Roberto.");
-		}
-			if(e.getSource()== rightButton) {
-				JOptionPane.showMessageDialog(null, "Why does Waldo wear stripes? Because he doesn’t want to be spotted.");
 			
 		}
+	}
+
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 	}
 
