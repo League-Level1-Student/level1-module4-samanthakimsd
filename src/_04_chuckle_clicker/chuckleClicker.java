@@ -11,12 +11,14 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class chuckleClicker {
+public class chuckleClicker 
+	implements ActionListener{
 	JButton leftButton = new JButton("joke");
 	JButton rightButton = new JButton("punchline");
-	JButton middleButton = new JButton();
+
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
+
 
 	void createUI() {
 
@@ -28,6 +30,8 @@ public class chuckleClicker {
 		frame.pack();
 		frame.setTitle("chuckle clicker");
 		frame.setVisible(true);
+		leftButton.addActionListener(this);
+		rightButton.addActionListener(this);
 	}
 
 	public static void main(String[] args) {
@@ -39,5 +43,17 @@ public class chuckleClicker {
 		// TODO Auto-generated method stub
 		
 		}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource() == leftButton) {
+			JOptionPane.showMessageDialog(null, "What do you call a guy with a rubber toe? Roberto.");
+		}
+			if(e.getSource()== rightButton) {
+				JOptionPane.showMessageDialog(null, "Why does Waldo wear stripes? Because he doesn’t want to be spotted.");
+			
+		}
+	}
 	}
 
