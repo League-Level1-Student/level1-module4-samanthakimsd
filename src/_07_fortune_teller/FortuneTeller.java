@@ -33,6 +33,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    	 // 2. Adjust the frameWidth and frameHeight variables to fit your image nicely (doesn’t need a new line of code)
      // 3. Complete the begin() method in the FortuneTellerRunner class
  	 // 4. add a mouse listener to the frame
+   	 frame.addMouseListener(null);
 
     }
 
@@ -43,11 +44,11 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    	 int mouseX = e.getX();
    	 int mouseY = e.getY();
    	 // 5. Print the mouseX variable
-
+System.out.println(mouseX);System.out.println(mouseY);
    	 // 6. Add the mouseY variable to the previous line so that it prints out too (no new line)
    	 // 7. Adjust your secret location co-ordinates here:
-   	 int secretLocationX = 0;
-   	 int secretLocationY = 0;
+   	 int secretLocationX =  250;
+   	 int secretLocationY = 300;
    	 /** If the mouse co-ordinates and secret location are close, we'll let them ask a question. */
    	 if (areClose(mouseX, secretLocationX) && areClose(mouseY, secretLocationY)) {
    		 // 8. Get the user to enter a question for the fortune teller
@@ -60,9 +61,38 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 
    		 // 12. Insert your completed Magic 8 ball code here
 
-   	 }
 
-    }
+
+
+
+	
+	int r = new Random().nextInt(4);
+	
+System.out.println(r);
+
+JOptionPane.showInputDialog("ask a question for the 8 ball");
+	
+if (r == 0) {
+	JOptionPane.showMessageDialog(null, "yes");
+}
+
+if (r == 1) {
+	JOptionPane.showMessageDialog(null, "no");
+}
+
+if (r == 2) {
+	JOptionPane.showMessageDialog(null, "maybe you should ask google");
+}
+
+if (r == 3) {
+	JOptionPane.showMessageDialog(null, "ask again later");
+}	
+
+}}
+
+   	 
+
+    
 
     private boolean areClose(int mouseX, int secretLocationX) {
    	 return mouseX < secretLocationX + 15 && mouseX > secretLocationX - 15;

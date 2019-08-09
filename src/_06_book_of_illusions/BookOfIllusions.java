@@ -24,11 +24,12 @@ public class BookOfIllusions extends MouseAdapter {
 	
 	// 1. Make a JFrame variable and initialize it using "new JFrame()"
 	JFrame frame = new JFrame();
+	
 	public void run() {
 		// 2. make the frame visible
 		frame.setVisible(true);
 		// 3. set the size of the frame
-		frame.setSize(350, 500);
+frame.setSize(50, 200);
 		// 4. find 2 images and save them to your project’s default package
 		// 5. make a variable to hold the location of your image. e.g. "illusion.jpg"
 		
