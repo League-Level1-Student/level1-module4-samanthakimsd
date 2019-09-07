@@ -27,11 +27,12 @@ public class chuckleClicker
 
 		panel.add(leftButton);
 		panel.add(rightButton);
-		frame.pack();
+	frame.pack();
 		frame.setTitle("chuckle clicker");
 		frame.setVisible(true);
 		leftButton.addActionListener(this);
 		rightButton.addActionListener(this);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}
 
@@ -48,11 +49,11 @@ public class chuckleClicker
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if(e.getSource() == leftButton) {
-			JOptionPane.showMessageDialog(null, "What do you call a guy with a rubber toe? Roberto.");
+		if(e.getSource()== leftButton) {
+			JOptionPane.showMessageDialog(null, "Why do scientists not trust atoms? Because they make up everything.");
 		}
 			if(e.getSource()== rightButton) {
-				JOptionPane.showMessageDialog(null, "Why does Waldo wear stripes? Because he doesn’t want to be spotted.");
+				JOptionPane.showMessageDialog(null, "A farmer in the field with his cows counted 196 of them, but when he rounded them up he had 200.");
 			
 		}
 	}

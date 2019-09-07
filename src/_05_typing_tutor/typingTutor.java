@@ -1,23 +1,31 @@
 package _05_typing_tutor;
 
-import javax.swing.JFrame;
+import java.util.Random;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class typingTutor {
-	JFrame frame = new JFrame();
-	public void run() {
-		frame.setVisible(true);
-	 frame.setName("type or die");
-
+	public static void main(String[] args) {
+		new typingTutor().createUI();
+	
 	}
-    
-public static void main(String[] args) {
+    JFrame frame = new JFrame("type or die");
+	JLabel label = new JLabel();
+	
+	char currentLetter;
+	char generateRandomLetter() {
+	    Random r = new Random();
+	    return (char) (r.nextInt(26) + 'a');
+	}
+	
+	private void createUI() {
+	frame.pack();
+		frame.setVisible(true);
+		frame.add(label);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		}
-
-
-private static char generateRandomLetter() {
-	// TODO Auto-generated method stub
-	return 0;
-}
+	
+	}
+	
 }

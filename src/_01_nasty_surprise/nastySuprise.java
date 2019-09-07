@@ -35,8 +35,10 @@ public class nastySuprise implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if (e.getSource==button1) {
-			
-		}
+		if (e.getSource() == button1) {
+
+			    }
+			}
+		
 	}
-}
+
