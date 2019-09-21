@@ -8,6 +8,7 @@ import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
@@ -45,5 +46,7 @@ public class wackAMole implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		if (e.getSource() == moleButton) {
+			JOptionPane.showMessageDialog(null, "yay");
+		}
 	}}

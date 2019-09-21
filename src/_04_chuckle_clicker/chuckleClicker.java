@@ -50,10 +50,10 @@ public class chuckleClicker
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getSource()== leftButton) {
-			JOptionPane.showMessageDialog(null, "Why do scientists not trust atoms? Because they make up everything.");
+			JOptionPane.showMessageDialog(null, "Why don’t scientists trust atoms? Because they make up everything.");
 		}
 			if(e.getSource()== rightButton) {
-				JOptionPane.showMessageDialog(null, "A farmer in the field with his cows counted 196 of them, but when he rounded them up he had 200.");
+				JOptionPane.showMessageDialog(null, "I totally understand how batteries feel because I’m rarely ever included in things either.");
 			
 		}
 	}
