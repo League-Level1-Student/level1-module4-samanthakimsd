@@ -12,6 +12,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class slotMachine implements ActionListener {
@@ -109,7 +110,7 @@ public void actionPerformed(ActionEvent e) {
 		pic = "lemon.jpg";
 	}	
 	if (b == 2) {
-		pic = "cherry.png";
+	    pic = "cherry.png";
 	}	
 	try {
 		label1 = createLabelImage(pic);
@@ -133,5 +134,7 @@ public void actionPerformed(ActionEvent e) {
 		e1.printStackTrace();
 	}
 	frame.pack();
+	JOptionPane.showMessageDialog(null, "yay you won !!");
 }
+
 }
