@@ -18,7 +18,8 @@ import javax.swing.JPanel;
 public class slotMachine implements ActionListener {
 public static void main(String[] args) {
 	new slotMachine().createUI();
-}
+	}
+
 JFrame frame = new JFrame();
 JPanel panel = new JPanel();
 JButton button = new JButton("spin");
